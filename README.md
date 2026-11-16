@@ -16,6 +16,16 @@ piece-square evaluation (pawn 100, knight 320, bishop 330, rook 500,
 queen 900, bishop-pair bonus). Every move is deterministic: the same
 position always gets the same move.
 
+## Measured results (practice trial, 6 games vs the house gauntlet)
+
+- Version 6: Elo 1,364 — 3 wins, 1 draw, 2 losses (wall 849s).
+- The practice floor to enter the final is 1,154 Elo.
+- Packed `main.py` is 4,029 bytes; the unpacked source (`engine.py`,
+  kept beside the sessions, not committed) is 12,765 bytes.
+- The packed entrypoint reproduces version 6 exactly: a second
+  6-game trial of the packed file scored the same Elo 1,364 with
+  the same game outcomes in the same order.
+
 ## Run it
 
 ```sh
